@@ -12,7 +12,8 @@ from models.userbook import UserBook
 import json
 import os
 from flask_migrate import Migrate
-from utils.read_json import book_data_list
+from utils.read_json import read_json
+from pathlib import Path
 # import secrets
 
 # create the app
@@ -334,6 +335,10 @@ def page_not_found(error):
 #     return render_template("user/create.html")
 
 with app.app_context():
+    path = "static/books/literature.json"
+
+    print(path)
+
     user_infors = [{"name": "user1", "email": "email1@gmail.com", "username": "username1", "password": "password1"},
                 {"name": "user2", "email": "email2@gmail.com", "username": "username2", "password": "password2"},
                 {"name": "user3", "email": "email3@gmail.com", "username": "username3", "password": "password3"},
@@ -347,7 +352,7 @@ with app.app_context():
     #             {"name": "book4", "author": "author4", "category": "category4", "describe": "describe4", "publication_date": "13.11.2025"},
     #             {"name": "book5", "author": "author5", "category": "category5", "describe": "describe5", "publication_date": "14.11.2025"},
     #             ]
-    book_infors = book_data_list
+    book_infors = read_json(path=path)
 
     try:
         db.drop_all()

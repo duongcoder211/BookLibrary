@@ -1,1 +1,1 @@
-from .read_json import book_data_list
+from .read_json import read_json
