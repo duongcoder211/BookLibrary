@@ -337,8 +337,6 @@ def page_not_found(error):
 with app.app_context():
     path = "static/books/literature.json"
 
-    print(path)
-
     user_infors = [{"name": "user1", "email": "email1@gmail.com", "username": "username1", "password": "password1"},
                 {"name": "user2", "email": "email2@gmail.com", "username": "username2", "password": "password2"},
                 {"name": "user3", "email": "email3@gmail.com", "username": "username3", "password": "password3"},
