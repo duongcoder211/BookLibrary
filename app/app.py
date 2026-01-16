@@ -6,9 +6,9 @@ import sqlalchemy as sa
 from sqlalchemy import select
 from .db.base import db
 import re
-from .models.user import User
-from .models.book import Book
-from .models.userbook import UserBook
+from models.user import User
+from models.book import Book
+from models.userbook import UserBook
 import json
 import os
 from flask_migrate import Migrate
