@@ -4,7 +4,7 @@ from flask import Flask, render_template, flash, redirect, url_for, request, ses
 # from flask_sqlalchemy import SQLAlchemy
 import sqlalchemy as sa
 from sqlalchemy import select
-from .db.base import db
+from db.base import db
 import re
 from models.user import User
 from models.book import Book
@@ -12,7 +12,7 @@ from models.userbook import UserBook
 import json
 import os
 from flask_migrate import Migrate
-from .utils.read_json import read_json
+from utils.read_json import read_json
 from pathlib import Path
 # import secrets
 
